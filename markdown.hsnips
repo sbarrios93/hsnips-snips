@@ -7,7 +7,7 @@ snippet yamltemp "Yaml Template" iA
 ---
 title: $1
 subtitle: $2
-author: 
+author:
 - $3
 date: ``rv = new Date().toDateString()``
 output:
@@ -42,7 +42,7 @@ snippet ~~ "similar" Am
 endsnippet
 
 snippet << "much lower" Am
-\ll 
+\ll
 endsnippet
 
 snippet >> "much greater" Am
@@ -51,14 +51,14 @@ endsnippet
 
 snippet `grad ` Am
 \nabla $1
-endsnippet 
+endsnippet
 
 snippet abs wAm
 \mid $1 \mid
 endsnippet
 
 snippet := "Assignment Operator" Am
-\coloneqq 
+\coloneqq
 endsnippet
 
 snippet argmin "Argmin" Am
@@ -69,17 +69,17 @@ snippet argmax "Argmax" Am
 \arg \max_{$1} $0
 endsnippet
 
-snippet ` lrn` Am
+snippet `lrn` Am
 \left( $1 \right)
 endsnippet
 
-snippet ` lrc` Am
+snippet `lrc` Am
 \left\{ $1 \right\\}
-endsnippet 
+endsnippet
 
-snippet ` lrs` Am
+snippet `lrs` Am
 \left[ $1 \right]
-endsnippet 
+endsnippet
 
 snippet dategreeting "Gives you the current date!"m
 Hello from your hsnip at ``rv = new Date().toDateString()``!
@@ -148,7 +148,7 @@ for (i=0; i < parseInt(m[1],10); i++) {
 }
 rv = msg;``
 \\end{array}\\right)
-endsnippet 
+endsnippet
 
 snippet `vec([1-9])` "column vector" Am
 ``rv = '\\begin{bmatrix}'``
@@ -198,7 +198,7 @@ snippet `(?<!\\)(sin|cos|arccot|cot|csc|ln|log|exp|star|perp)` "ln" wAm
 endsnippet
 
 snippet mk "inline math" A
-$ $1 $``if (t[1] && ",-.?: )]".indexOf(t[1][0]) >= 0) { rv = '' } else { rv = ' ' }``$2
+$$1$``if (t[1] && ",-.?: )]".indexOf(t[1][0]) >= 0) { rv = '' } else { rv = ' ' }``$2
 endsnippet
 
 snippet dmk "display math" A
@@ -209,7 +209,7 @@ endsnippet
 
 ```
 
-snippet `\=(?<![\\a-zA-Z])([a-zA-Z])\1{1}(?![a-zA-Z])` "greek letters" Am
+snippet `(?<![\\a-zA-Z])([a-zA-Z])\1{1}(?![a-zA-Z])` "greek letters" Am
 ``transliteration = {"a": "\\alpha", "b": "\\beta", "g": "\\gamma", "G": "\\Gamma", "d": "\\delta", "D": "\\Delta", "e": "\\epsilon", "E": "\\varepsilon", "z": "\\zeta", "h": "\\eta", "t": "\\theta", "T": "\\Theta", "k": "\\kappa", "i": "\\iota", "l": "\\lambda", "L": "\\Lambda", "m": "\\mu", "n": "\\nu", "x": "\\xi", "X": "\\Xi", "p": "\\pi", "P": "\\Pi", "r": "\\rho", "s": "\\sigma", "S": "\\Sigma", "o": "\\omega", "O": "\\Omega", "c": "\\chi", "f": "\\phi", "F": "\\Phi", "y": "\\upsilon", "Y": "\\Upsilon", "v": "\\psi", "V": "\\Psi", "u": "\\tau" };
 rv = (transliteration[m[1]] || (m[1] + m[1]))``
 endsnippet
@@ -232,9 +232,9 @@ endsnippet
 
 snippet `\b(d|D)(\\?\w+)[dD](\w{1}|\\\w+) ` "derivatives" Am
 ``
-if (m[1] == 'd') 
+if (m[1] == 'd')
   rv = '\\frac{\\partial ' + m[2] + '}{\\partial ' + m[3] + '}';
-else 
+else
   rv = '\\frac{\\mathrm{d' + m[2] + '}}{\\mathrm{d' + m[3] + '}}';
 ``
 endsnippet
@@ -260,7 +260,7 @@ snippet `>=` "geq" Am
 endsnippet
 
 snippet `([\\?a-zA-Z]+)->([\\?a-zA-Z]+) ` Am
-``rv = '$1 \\xrightarrow[' + m[1] + ' \\to ' + m[2].replace('inf', '\\infty') + ']{} $2'`` 
+``rv = '$1 \\xrightarrow[' + m[1] + ' \\to ' + m[2].replace('inf', '\\infty') + ']{} $2'``
 endsnippet
 
 snippet `lim_([\\?a-zA-Z]+)_([\\?a-zA-Z]+) ` Am
@@ -306,7 +306,7 @@ snippet == "equals" iAm
 endsnippet
 
 snippet != "equals" iAm
-\neq 
+\neq
 endsnippet
 
 snippet ceil "ceil" iAm
@@ -370,11 +370,11 @@ snippet taylor "taylor" wm
 endsnippet
 
 snippet lim "limit" wm
-\lim_{${1:n} \to ${2:\infty}} 
+\lim_{${1:n} \to ${2:\infty}}
 endsnippet
 
 snippet limsup "limsup" wm
-\limsup_{${1:n} \to ${2:\infty}} 
+\limsup_{${1:n} \to ${2:\infty}}
 endsnippet
 
 snippet prod "product" wm
@@ -422,19 +422,19 @@ snippet rij "mrij" iAm
 endsnippet
 
 snippet <= "leq" iAm
-\le 
+\le
 endsnippet
 
 snippet >= "geq" iAm
-\ge 
+\ge
 endsnippet
 
 snippet EE "geq" iAm
-\exists 
+\exists
 endsnippet
 
 snippet AA "forall" iAm
-\forall 
+\forall
 endsnippet
 
 snippet xnn "xn" iAm
@@ -482,15 +482,15 @@ snippet lll "l" iAm
 endsnippet
 
 snippet nabl "nabla" iAm
-\nabla 
+\nabla
 endsnippet
 
 snippet xx "cross" iAm
-\times 
+\times
 endsnippet
 
 snippet ** "cdot" iAm
-\cdot 
+\cdot
 endsnippet
 
 snippet norm "norm" iAm
@@ -503,7 +503,7 @@ snippet dint "integral" wAm
 endsnippet
 
 snippet -> "to" iAm
-\to 
+\to
 endsnippet
 
 snippet <-> "leftrightarrow" iAm
@@ -511,7 +511,7 @@ snippet <-> "leftrightarrow" iAm
 endsnippet
 
 snippet !> "mapsto" iAm
-\mapsto 
+\mapsto
 endsnippet
 
 snippet invs "inverse" iAm
@@ -535,7 +535,7 @@ snippet << "<<" iAm
 endsnippet
 
 snippet ~~ "~" iAm
-\sim 
+\sim
 endsnippet
 
 snippet set "set" wAm
@@ -543,20 +543,20 @@ snippet set "set" wAm
 endsnippet
 
 snippet || "mid" iAm
- \mid 
+ \mid
 endsnippet
 
 
 snippet cc "subset" Aim
-\subset 
+\subset
 endsnippet
 
 snippet notin "not in " iAm
-\not\in 
+\not\in
 endsnippet
 
 snippet inn "in " iAm
-\in 
+\in
 endsnippet
 
 snippet NN "n" iAm
@@ -564,11 +564,11 @@ snippet NN "n" iAm
 endsnippet
 
 snippet Nn "cap" iAm
-\cap 
+\cap
 endsnippet
 
 snippet UU "cup" iAm
-\cup 
+\cup
 endsnippet
 
 snippet uuu "bigcup" iAm
@@ -596,11 +596,11 @@ snippet ZZ "Z" iAm
 endsnippet
 
 snippet <! "normal" iAm
-\triangleleft 
+\triangleleft
 endsnippet
 
 snippet <> "hokje" iAm
-\diamond 
+\diamond
 endsnippet
 
 
@@ -637,7 +637,7 @@ snippet "([a-zA-Z])bar" "bar" iAm
 \overline{`!p snip.rv=match.group(1)`}
 endsnippet
 
-snippet ` hat` "hat" iAm
+snippet `hat` "hat" iAm
 \hat{$1}$0
 endsnippet
 
@@ -674,6 +674,6 @@ endsnippet
 
 snippet tetand "text and" wAm
 \text{ and }
-endsnippet 
+endsnippet
 
 
